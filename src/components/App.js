@@ -2,13 +2,15 @@ import React, {useEffect, useState} from 'react'
 import '../styles/App.css';
 
 const App = () => {
+
   let [css, setCss]=useState(true)
-  let [classs, setClasss]=useState("redColor")
+  let [cls, setCls]=useState("redColor")
+
   useEffect(() => {
     if(css){
-      setClasss("redColor")
+      setCls("redColor")
     }else{
-      setClasss("blueColor")
+      setCls("blueColor")
     }    
   }, [css])
   
@@ -20,7 +22,7 @@ const App = () => {
 
   return (
     <div id="main">
-      <p className={classs} >Newton School</p>
+      <p className={cls} >Newton School</p>
       <button id='button' onClick={change}>Change Style</button>
     </div>
   )
