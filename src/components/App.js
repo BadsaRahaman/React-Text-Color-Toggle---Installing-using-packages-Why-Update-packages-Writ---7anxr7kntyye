@@ -6,6 +6,10 @@ const App = () => {
   let [css, setCss]=useState(true)
   let [cls, setCls]=useState("redColor")
 
+   function change(){
+    setCss(!css)
+  }
+  
   useEffect(() => {
     if(css){
       setCls("redColor")
@@ -15,14 +19,12 @@ const App = () => {
   }, [css])
   
 
-  function change(){
-    setCss(!css)
-  }
+ 
 //code here 
 
   return (
     <div id="main">
-      <p className={cls} >Newton School</p>
+      <p className={cls}>Newton School</p>
       <button id='button' onClick={change}>Change Style</button>
     </div>
   )
